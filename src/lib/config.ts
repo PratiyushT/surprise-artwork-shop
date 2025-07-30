@@ -3,7 +3,7 @@ export const PRICING_TIERS = [
   {
     id: 'basic',
     name: 'Basic Surprise',
-    price: 999, // $9.99 in cents
+    price: 9.99,
     description: 'A delightful digital artwork to brighten your day',
     features: [
       'High-quality digital artwork',
@@ -15,7 +15,7 @@ export const PRICING_TIERS = [
   {
     id: 'premium',
     name: 'Premium Surprise',
-    price: 1999, // $19.99 in cents
+    price: 19.99,
     description: 'Premium curated artwork with exclusive content',
     features: [
       'Premium high-resolution artwork',
@@ -28,7 +28,7 @@ export const PRICING_TIERS = [
   {
     id: 'deluxe',
     name: 'Deluxe Collection',
-    price: 3999, // $39.99 in cents
+    price: 39.99,
     description: 'The ultimate surprise package with bonus content',
     features: [
       'Ultra high-resolution artwork',
@@ -41,8 +41,8 @@ export const PRICING_TIERS = [
   }
 ];
 
-// Tip options in cents
-export const TIP_OPTIONS = [0, 100, 200, 500]; // $0, $1, $2, $5
+// Tip options in dollars
+export const TIP_OPTIONS = [0, 1.00, 2.00, 5.00]; // $0, $1, $2, $5
 
 // Pexels search queries for different tier levels
 export const PEXELS_QUERIES = {

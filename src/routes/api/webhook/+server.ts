@@ -45,13 +45,13 @@ export const POST: RequestHandler = async ({ request }) => {
       const tierData = {
         id: metadata.tier_id,
         name: metadata.tier_name,
-        price: parseInt(metadata.tier_price),
+        price: parseFloat(metadata.tier_price),
         description: '', // We don't store description in metadata
         features: [] // We don't store features in metadata
       };
 
-      const tipAmount = parseInt(metadata.tip_amount) || 0;
-      const totalAmount = parseInt(metadata.total_amount);
+      const tipAmount = parseFloat(metadata.tip_amount) || 0;
+      const totalAmount = parseFloat(metadata.total_amount);
 
       // Initialize services
       const pexelsService = new PexelsService(PEXELS_KEY);

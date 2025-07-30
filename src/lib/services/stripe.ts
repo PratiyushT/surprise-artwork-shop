@@ -10,11 +10,20 @@ export class StripeService {
     });
   }
 
+  // Convert dollar amount to cents for Stripe API
+  private dollarsToCents(dollars: number): number {
+    return Math.round(dollars * 100);
+  }
+
   async createCheckoutSession(
     tier: PricingTier,
     tipAmount: number,
     baseUrl: string
   ): Promise<Stripe.Checkout.Session> {
+    // Convert dollar amounts to cents for Stripe
+    const tierPriceCents = this.dollarsToCents(tier.price);
+    const tipAmountCents = this.dollarsToCents(tipAmount);
+
     const lineItems: Stripe.Checkout.SessionCreateParams.LineItem[] = [
       {
         price_data: {
@@ -24,7 +33,7 @@ export class StripeService {
             description: tier.description,
             images: ['https://images.unsplash.com/photo-1541961017774-22349e4a1262?w=400']
           },
-          unit_amount: tier.price,
+          unit_amount: tierPriceCents,
         },
         quantity: 1,
       }
@@ -39,7 +48,7 @@ export class StripeService {
             name: 'Tip for Artist',
             description: 'Support the amazing photographers'
           },
-          unit_amount: tipAmount,
+          unit_amount: tipAmountCents,
         },
         quantity: 1,
       });

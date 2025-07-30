@@ -22,12 +22,12 @@
 
   function handleCustomTip() {
     if (customTip > 0) {
-      tipAmount = Math.round(customTip * 100); // Convert to cents
+      tipAmount = parseFloat(customTip.toFixed(2)); // Keep as dollars
     }
   }
 
-  function formatPrice(cents: number): string {
-    return (cents / 100).toFixed(2);
+  function formatPrice(dollars: number): string {
+    return dollars.toFixed(2);
   }
 
   function getTotalAmount(): number {
