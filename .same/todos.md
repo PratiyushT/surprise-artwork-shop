@@ -25,6 +25,9 @@
 - [x] Beautiful, responsive design with Tailwind CSS
 - [x] Production-ready SvelteKit application with TypeScript
 - [x] Push complete project to GitHub (https://github.com/PratiyushT/surprise-artwork-shop)
+- [x] ✨ **NEW**: Simplified pricing format using dollars instead of cents
+- [x] Automatic conversion to cents handled in Stripe service
+- [x] Updated documentation and deployed new version
 
 ## 🎯 Production Ready Features
 - ✅ Fast SvelteKit application with server-side rendering
