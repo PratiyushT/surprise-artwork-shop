@@ -20,6 +20,7 @@ declare namespace NodeJS {
 		ZAPIER_WEBHOOK_URL: string;
 		ZAPIER_SECRET_KEY: string;
 		PUBLIC_SITE_URL: string;
+		NODE_ENV: 'development' | 'production';
 	}
 }
 

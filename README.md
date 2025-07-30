@@ -13,6 +13,7 @@ A fast, production-grade SvelteKit web application that lets users purchase surp
 - **Responsive Design**: Mobile-first, responsive UI with Tailwind CSS
 - **TypeScript**: Full type safety throughout the application
 - **Production Ready**: Optimized for scalability and performance
+- **Smart Logging**: Development/production logging with performance monitoring
 
 ## 🛠️ Tech Stack
 
@@ -23,6 +24,7 @@ A fast, production-grade SvelteKit web application that lets users purchase surp
 - **Image API**: Pexels API v1
 - **Automation**: Zapier Webhooks
 - **Environment**: .env configuration
+- **Logging**: Production/Development logging system
 
 ## 📦 Installation
 
@@ -54,6 +56,7 @@ A fast, production-grade SvelteKit web application that lets users purchase surp
 
    # App Configuration
    PUBLIC_SITE_URL=http://localhost:5173
+   NODE_ENV=development
    ```
 
 3. **Start the development server:**
@@ -85,6 +88,13 @@ Pricing tiers are configured in `src/lib/config.ts`:
 1. Create a Zapier webhook trigger
 2. Set up your desired automation workflow
 3. Add the webhook URL and secret key to environment variables
+
+### Logging Configuration
+The app includes a comprehensive logging system:
+- **Development** (`NODE_ENV=development`): Verbose logging with debug info, timers, and detailed context
+- **Production** (`NODE_ENV=production`): Clean logging with only important events and errors
+- **Service-specific logs**: Stripe, Pexels, Zapier operations are logged separately
+- **Performance monitoring**: Automatic timing of critical operations in development
 
 ## 🔄 Workflow
 
@@ -181,6 +191,7 @@ The app includes comprehensive debugging tools:
 - Use `/debug` page for quick integration tests
 - Check `/monitor` for real-time status
 - See `docs/INTEGRATION_GUIDE.md` for detailed setup
+- Check `docs/LOGGING_GUIDE.md` for logging system usage
 
 ## 📊 Monitoring
 
