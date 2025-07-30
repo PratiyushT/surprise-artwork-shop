@@ -65,7 +65,8 @@ A fast, production-grade SvelteKit web application that lets users purchase surp
 
 ### Pricing Tiers
 Pricing tiers are configured in `src/lib/config.ts`:
-- Prices are in cents (999 = $9.99)
+- Prices are in straightforward dollar format (19.99)
+- Automatically converted to cents in Stripe service
 - Each tier has customizable features and descriptions
 - Pexels search queries are tier-specific for varied artwork
 
