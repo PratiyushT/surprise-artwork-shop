@@ -144,21 +144,43 @@ The app is configured for deployment on platforms like:
 - **Secure Headers**: Zapier webhooks use Bearer token authentication
 - **Input Validation**: All user inputs are validated
 
-## 🧪 Testing
+## 🧪 Testing & Debugging
+
+### Built-in Debug Tools
+
+The app includes comprehensive debugging tools:
+
+**Debug Page**: `/debug`
+- Test Zapier webhook integration
+- Test Pexels API connection
+- Verify Stripe webhook endpoint
+- Real-time integration testing
+
+**Monitor Dashboard**: `/monitor`
+- Real-time webhook status monitoring
+- System health overview
+- Recent webhook delivery logs
+- Auto-refresh functionality
 
 ### Manual Testing
 1. Start the dev server
-2. Select a pricing tier
-3. Add optional tip
-4. Click "Purchase Now"
-5. Complete Stripe checkout with test card: `4242 4242 4242 4242`
-6. Verify webhook processing in logs
-7. Check Zapier automation
+2. Visit `/debug` to test all integrations
+3. Select a pricing tier on main page
+4. Add optional tip
+5. Click "Purchase Now"
+6. Complete Stripe checkout with test card: `4242 4242 4242 4242`
+7. Verify webhook processing in logs
+8. Check Zapier automation in `/monitor`
 
 ### Test Cards
 - **Success**: 4242 4242 4242 4242
 - **Decline**: 4000 0000 0000 0002
 - **3D Secure**: 4000 0027 6000 3184
+
+### Integration Testing
+- Use `/debug` page for quick integration tests
+- Check `/monitor` for real-time status
+- See `docs/INTEGRATION_GUIDE.md` for detailed setup
 
 ## 📊 Monitoring
 
