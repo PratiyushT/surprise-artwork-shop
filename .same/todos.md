@@ -24,6 +24,7 @@
 - [x] Deploy application to production (https://same-1cfqwls7s0o-latest.netlify.app)
 - [x] Beautiful, responsive design with Tailwind CSS
 - [x] Production-ready SvelteKit application with TypeScript
+- [x] Push complete project to GitHub (https://github.com/PratiyushT/surprise-artwork-shop)
 
 ## 🎯 Production Ready Features
 - ✅ Fast SvelteKit application with server-side rendering
